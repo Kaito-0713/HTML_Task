@@ -1,20 +1,7 @@
-.head{
-    display: none;
-}
-style{
-    display: none;
-}
-link{
-    display: none;
-}
-meta{
-    display: none;
-}
 body,div,p,ul,ol,li,dl,dt,dd,table,th,td,img,figure,h1,h2,h3,h4,h5,h6,form,select{
     margin: 0;
     padding: 0;
 }
-
 body{
     --wp--preset--color--black: #000000;
     --wp--preset--color--cyan-bluish-gray: #abb8c3;
@@ -58,13 +45,6 @@ body{
     --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
     display: block;
 }
-
-*, *::before, *::after {
-    word-break: break-all;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 *,*::before,*::after{
     word-break:break-word;
     box-sizing:border-box;
@@ -97,7 +77,6 @@ body{
     background-color: #fff;
     display: grid;
     height: 70px;
-    unicode-bidi: isolate;
 }
 .header-common{
     box-shadow: 0px 15px 20px 0px rgba(0,0,0,0.05);
@@ -139,13 +118,13 @@ a{
 a:-webkit-any-kit{
     cursor: pointer;
 }
-.header-container>*:last-child{
+.header-container>*:last-child {
     display: inline-flex;
 }
 nav{
     unicode-bidi: isolate;   
 }
-.header-nav-hamberger{
+.header-nav-hamburger{
     display: none;
 }
 div{
@@ -155,6 +134,7 @@ div{
     align-items: center;
     display: flex;
     justify-content:space-between;
+    position: relative;
 }
 ul{
     list-style: none;
@@ -165,10 +145,9 @@ ul{
     unicode-bidi: isolate;
 }
 .header-nav-item{
-    transition: opacity 0.2;
-}
-.header-nav-item{
     margin-right: 45px;
+    transition: opacity 0.2s;
+    display: flex;
 }
 li{
     display: list-item;
@@ -178,7 +157,7 @@ li{
 .header-nav-item-link{
     display: block;
 }
-a {
+a{
     color: #333;
     text-decoration: none;
 }
@@ -195,35 +174,33 @@ a {
 .header-nav-item-link>span:last-child{
     font-size: 10px;
 }
-.header-nav-item:last-of-type{
-    margin-right: 0;
+
+@media screen and (min-width: 768px) {
+  .header-nav-item{
+  transition: opacity 0.2s;
+  }
 }
 .header-nav-item-button{
-    transition: opacity 0.2s;
-    align-items: center;
-    background-color: #F79214;
-    border: none;
-    border-radius: 38px;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    font-weight: 700;
-    height: 64px;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
-    font-size: 12px;
-    height: 40px;
-    padding: 0 20px;
+   display: flex;                
+  align-items: center;          
+  justify-content: center;      
+  height: 40px;                              
+  border: none;
+  border-radius: 38px;
+  background-color: #F79214;    
+  color: #fff;                  
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
 }
 .firstview{
     position: relative;
-    height: 739;
+    height: 739px;
 }
-seciton{
+section{
     display: block;
     unicode-bidi: isolate;
 }
@@ -235,16 +212,16 @@ img.lazy{
     left: 0;
 }
 .firstview-image-right{
-    bottom: 70px;
+    bottom: -90px;
     right: 0;
-}
-.firstview-image-fill{
-    top: 84px;
-    left: -70px;
 }
 .firstview-image{
     position: absolute;
     z-index: -1;
+}
+.firstview-image-fill{
+  top: 84px;
+  left: -70px;
 }
 .firstview-image-main-visual{
     top: -70px;
@@ -257,7 +234,7 @@ img.lazy{
 img{
     border: 0;
     vertical-align: middle;
-    overflow-clip-margin: content-box;
+     overflow-clip-margin: content-box;
     overflow: clip;
     width: 348;
     height: 348;
@@ -269,7 +246,7 @@ img{
     position: relative;
     padding-top: 219px;
 }
-.firstview-content {
+.firstview-content{
     position: relative;
     width: fit-content;
 }
@@ -284,6 +261,8 @@ div {
     font-weight: 800;
     line-height: 63px;
     margin-bottom: 16px;
+    display: flex; 
+    justify-content: space-between; 
 }
 h2 {
     display: block;
@@ -323,6 +302,12 @@ h2 {
     width: 100%;
     margin-bottom: 16px;
 }
+@media screen and (min-width: 768px) {
+    .firstview-content-button {
+        transition: opacity 0.2s;
+    }
+}
+
 .firstview-caption{
     font-size: 12px;
     line-height: 16px;
